@@ -45,7 +45,7 @@ Docker principles and best practices
 | Docker | Virtual Machine |
 | ------------- | ------------- |
 | __Application__ | __Application__ |
-| OS Kernel | __OS Kernel |
+| OS Kernel | __OS Kernel__ |
 | Hardware | Hardware |
 
 - __Size:__ Docker images are much smaller.
