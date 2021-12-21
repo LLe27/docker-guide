@@ -51,3 +51,15 @@ Docker principles and best practices
 - __Size:__ Docker images are much smaller.
 - __Speed:__ Docker containers start and run faster.
 - __Compatibility:__ VM of any OS can run on any OS host.
+
+## Docker Images vs. Containers
+- Container:
+    - __CONTAINER__ is a running environment for __IMAGE__
+    - __virtual__ filesystem
+    - port binded: talk to application running inside a container
+    - application image: postgres, redis, mongo...
+
+## Docker Debugging
+- ```docker logs```
+- ```docker exec -it```
+
