@@ -52,16 +52,23 @@ Docker principles and best practices
 - __Speed:__ Docker containers start and run faster.
 - __Compatibility:__ VM of any OS can run on any OS host.
 
-## Docker Images vs. Containers
+### Docker Images vs. Containers
 - Container:
     - __CONTAINER__ is a running environment for __IMAGE__
     - __virtual__ filesystem
     - port binded: talk to application running inside a container
     - application image: postgres, redis, mongo...
 
-## Docker Debugging
+### Docker Debugging
 - ```docker logs {{ containerId }}```
 - ```docker logs {{ containerId }} | tail```
 - ```docker logs {{ containerId }} -f```
 - ```docker exec -it```
 
+### Docker Compose
+- ```docker-compose -f {{ yaml file }} up```
+- ```docker-compose -f {{ yaml file }} down```
+
+### Dockerfile
+- ```CMD``` = entrypoint command
+- You can have multiple ```RUN``` commands
