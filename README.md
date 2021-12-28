@@ -60,6 +60,8 @@ Docker principles and best practices
     - application image: postgres, redis, mongo...
 
 ## Docker Debugging
-- ```docker logs```
+- ```docker logs {{ containerId }}```
+- ```docker logs {{ containerId }} | tail```
+- ```docker logs {{ containerId }} -f```
 - ```docker exec -it```
 
