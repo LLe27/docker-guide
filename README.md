@@ -5,7 +5,7 @@ Docker principles and best practices
 - A way to __package__ application with __all__ the __necessary depedencies__ and __configurations__.
 - __Portable artifact__, easily shared and moved around.
 - Makes development and deployment __more efficient__.
-- Layers of images
+- Layers of images.
 - Mostly __Linux Base Image__ because small in size.
 - Application image on top.
 
@@ -56,7 +56,7 @@ Docker principles and best practices
 - Container:
     - __CONTAINER__ is a running environment for __IMAGE__
     - __virtual__ filesystem
-    - port binded: talk to application running inside a container
+    - port binded: talk to application running inside a container.
     - application image: postgres, redis, mongo...
 
 ### Docker Debugging
@@ -72,3 +72,20 @@ Docker principles and best practices
 ### Dockerfile
 - ```CMD``` = entrypoint command
 - You can have multiple ```RUN``` commands
+
+### Docker Volume
+- Used for __data persistance__
+- Databases
+- Other stateful applications
+- Directory/folder in physical host file system is __mounted__ into the virtual file system of Docker.
+    - Data gets automatically replicated.
+- 3 types of volumes:
+    - ```docker run```
+        1. ```-v /home/mount/data:/var/lib/mysql/data```
+            - __Host volumes:__ you decide __where on the host file system__ the reference is made.
+        2. ```-v /var/lib/mysql/data```
+            - __Anonymous volumes:__ for __each container a folder is generated__ that gets mounted.
+            - Automatically created by Docker.
+        3. ```-v __name__:/var/lib/mysql/data```
+            - __Named volumes:__ you can __reference__ the volume by __name__.
+            - This is the preferred volume type used in production.
